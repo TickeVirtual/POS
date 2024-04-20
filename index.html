@@ -260,6 +260,7 @@ img#impresoraButton {
         // Obtener los valores de los parámetros
         var nro_boleta = params.has('boleta') ? params.get('boleta') : "---";
         var nombre_cliente = params.has('cliente') ? params.get('cliente') : "==Cliente==";
+        var subcliente = params.has('subcliente') ? params.get('subcliente') : "==SubCliente==";
         var telefono = params.has('telefono') ? params.get('telefono') : "==Cliente==";
         var codigo_pais = params.has('codigo_pais') ? params.get('codigo_pais') : "==Cliente==";
         var fecha = params.has('fecha') ? params.get('fecha') : "dd/mm/aaaa hh:mm:ss";
@@ -358,16 +359,23 @@ img#impresoraButton {
             <b>TICKET:<br>
             <h1 class="nro_boleta" id="nro_boleta_id" ></h1>
          </div>
-        <div class="fecharecep">
-            <p class="fecha">
-                
-                <b>FECHA RECEPCION:<br>
-                <b id="fecha"></b>
+
+          
+        <div class="ticket">  
+            <b>FECHA RECEPCION:<br>
+            <b id="fecha"></b>
+            </div>  
+          <div class="ticket">   
             <br>
             <b>CLIENTE:<br>
             <b id="nombre_client"></b>
+              </div>
           
-        </div>
+          <div class="ticket">   
+            <br>
+            <b>MASCOTA:<br>
+            <b id="subcliente"></b>
+              </div>
 
         <div class="label">
             <p class="fecha_entrega">
@@ -545,6 +553,7 @@ document.getElementById('impresoraButton').addEventListener('click', printTicket
         var nroBoletaElement = document.getElementById("nro_boleta_id").textContent = nro_boleta;
         var fechaElement = document.getElementById("fecha").textContent = fecha;
         var nombre_clientElement = document.getElementById("nombre_client").textContent = nombre_cliente;
+        var subclienteElement = document.getElementById("subcliente").textContent = subcliente;
         var fecha_entregaElement = document.getElementById("fecha_entrega").textContent = fecha_entrega;
         
 
