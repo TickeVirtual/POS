@@ -491,17 +491,17 @@ document.getElementById('impresoraButton').addEventListener('click', printTicket
                 </tr>
               
                 <tr class="table-footer">
-                    <td colspan="3"><h2>Desc x prenda:</h2></td>
-                    <td colspan="3"><h2 id="desc_por_prenda"></h2></td>
+                    <td colspan="3"><h2>Pagó:</h2></td>
+                    <td colspan="3"><h2 id="a_cuenta"></h2></td>
                     
                 </tr>
                  <tr class="table-footer">
-                    <td colspan="3"><h2>Desc ticket:</h2></td>
-                    <td colspan="3"><h2 id="subtotal_desc"></h2></td>
+                    <td colspan="3"><h2>Pendiente:</h2></td>
+                    <td colspan="3"><h2 id="total_por_pagar"></h2></td>
                     
                 </tr>
                 
-                <tr class="table-footer">
+                <!--<tr class="table-footer">
                     <td colspan="3"><h2>A cuenta :</h2></td>
                     <td colspan="3"><h2 id="a_cuenta"></h2></td>
                     
@@ -528,7 +528,7 @@ document.getElementById('impresoraButton').addEventListener('click', printTicket
                  <tr class="table-footer">
                     <td colspan="3"><h2>Total por pagar:</h2></td>
                     <td colspan="3"><h2 id="total_por_pagar"></h2></td>
-                </tr>
+                </tr>-->
                 
                 
             </tbody>
@@ -557,16 +557,16 @@ document.getElementById('impresoraButton').addEventListener('click', printTicket
         var fecha_entregaElement = document.getElementById("fecha_entrega").textContent = fecha_entrega;
         
 
-        var totalElement = document.getElementById("total").textContent = total;
+        var totalElement = document.getElementById("total");totalElement.textContent = parseFloat(total).toFixed(2);
         var subtotal_descElement = document.getElementById("subtotal_desc").textContent = subtotal_desc;
         var desc_por_prendaElement = document.getElementById("desc_por_prenda").textContent = desc_por_prenda;
         var total_a_pagarElement = document.getElementById("total_a_pagar").textContent = total_a_pagar;
-        var a_cuentaElement = document.getElementById("a_cuenta").textContent = a_cuenta;
+        var a_cuentaElement = document.getElementById("a_cuenta");a_cuentaElement.textContent = parseFloat(a_cuenta).toFixed(2);
         var a_cuenta_dosElement = document.getElementById("a_cuenta_dos").textContent = a_cuenta_dos;
         
         var porcent_descElement = document.getElementById("porcent_desc").textContent = porcent_desc;
         var porcent_desc_plataElement = document.getElementById("porcent_desc_plata").textContent = porcent_desc_plata;
-        var total_por_pagarElement = document.getElementById("total_por_pagar").textContent = total_por_pagar;
+        var total_por_pagarElement = document.getElementById("total_por_pagar");total_por_pagarElement.textContent = parseFloat(total_por_pagar).toFixed(2);
         
         var estadoElement = document.getElementById("estado").textContent = estado;
       </script>   
